@@ -1,0 +1,53 @@
+{
+  "phases": [
+    {
+      "id": "discovery",
+      "label": "Descubrimiento",
+      "index": 0,
+      "description": "Analisis del proyecto y carga en el grafo",
+      "canTransitionTo": ["specification"],
+      "gates": {}
+    },
+    {
+      "id": "specification",
+      "label": "Especificacion",
+      "index": 1,
+      "description": "Definicion de contratos y dependencias",
+      "canTransitionTo": ["specification", "backlog", "delivery"],
+      "gates": {
+        "backlog": { "requires": "specification_completed", "message": "Completa la especificacion primero" },
+        "delivery": { "requires": "backlog_seeded", "message": "Crea el backlog primero" }
+      }
+    },
+    {
+      "id": "backlog",
+      "label": "Backlog",
+      "index": 2,
+      "description": "Creacion y priorizacion de tickets",
+      "canTransitionTo": ["delivery"],
+      "gates": {
+        "delivery": { "requires": "tickets_exist", "message": "Debe haber al menos un ticket" }
+      }
+    },
+    {
+      "id": "delivery",
+      "label": "Desarrollo",
+      "index": 3,
+      "description": "Implementacion de tickets",
+      "canTransitionTo": ["delivery", "close"],
+      "gates": {
+        "close": { "requires": "session_active", "message": "Debe haber una sesion activa" }
+      }
+    },
+    {
+      "id": "close",
+      "label": "Cierre",
+      "index": 4,
+      "description": "Documentacion y cierre de sesion",
+      "canTransitionTo": ["delivery", "discovery"],
+      "gates": {
+        "delivery": { "requires": "project_exists", "message": "El proyecto debe existir en el grafo" }
+      }
+    }
+  ]
+}

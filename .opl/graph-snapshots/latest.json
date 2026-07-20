@@ -1,0 +1,110 @@
+{
+  "nodes": [
+    {
+      "label": "QWERTYMusic Studio",
+      "type": "directory",
+      "filePath": "/home/nodead/Documentos/QWERTYMusic Studio",
+      "properties": {
+        "isRoot": true
+      },
+      "id": "node_1"
+    },
+    {
+      "label": "src",
+      "type": "directory",
+      "filePath": "/home/nodead/Documentos/QWERTYMusic Studio/src",
+      "id": "node_2"
+    },
+    {
+      "label": "vite.config.ts",
+      "type": "file",
+      "filePath": "/home/nodead/Documentos/QWERTYMusic Studio/vite.config.ts",
+      "properties": {
+        "extension": ".ts",
+        "size": 878,
+        "lines": 34,
+        "category": "code"
+      },
+      "id": "node_3"
+    },
+    {
+      "label": "App.tsx",
+      "type": "file",
+      "filePath": "/home/nodead/Documentos/QWERTYMusic Studio/src/App.tsx",
+      "properties": {
+        "extension": ".tsx",
+        "size": 15479,
+        "lines": 337,
+        "category": "code"
+      },
+      "id": "node_4"
+    },
+    {
+      "label": "main.tsx",
+      "type": "file",
+      "filePath": "/home/nodead/Documentos/QWERTYMusic Studio/src/main.tsx",
+      "properties": {
+        "extension": ".tsx",
+        "size": 251,
+        "lines": 11,
+        "category": "code"
+      },
+      "id": "node_5"
+    },
+    {
+      "label": "vite-env.d.ts",
+      "type": "file",
+      "filePath": "/home/nodead/Documentos/QWERTYMusic Studio/src/vite-env.d.ts",
+      "properties": {
+        "extension": ".ts",
+        "size": 38,
+        "lines": 2,
+        "category": "code"
+      },
+      "id": "node_6"
+    }
+  ],
+  "edges": [
+    {
+      "id": "edge_1",
+      "from": "node_1",
+      "to": "node_2",
+      "relation": "CONTAINS"
+    },
+    {
+      "id": "edge_2",
+      "from": "node_1",
+      "to": "node_3",
+      "relation": "CONTAINS"
+    },
+    {
+      "id": "edge_3",
+      "from": "node_2",
+      "to": "node_4",
+      "relation": "CONTAINS"
+    },
+    {
+      "id": "edge_4",
+      "from": "node_2",
+      "to": "node_5",
+      "relation": "CONTAINS"
+    },
+    {
+      "id": "edge_5",
+      "from": "node_2",
+      "to": "node_6",
+      "relation": "CONTAINS"
+    },
+    {
+      "id": "edge_6",
+      "from": "node_5",
+      "to": "node_4",
+      "relation": "IMPORTS",
+      "properties": {
+        "importSpec": "App"
+      }
+    }
+  ],
+  "version": "1.0",
+  "timestamp": 1784506002118
+}

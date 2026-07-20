@@ -1,0 +1,31 @@
+{
+  "project": {
+    "name": "QWERTYMusic Studio",
+    "type": "webapp",
+    "description": "Proyecto OPL creado con opl init",
+    "createdAt": "2026-07-19T22:36:57.778Z"
+  },
+  "workflow": {
+    "phases": [
+      "discovery",
+      "specification",
+      "backlog",
+      "delivery",
+      "close"
+    ],
+    "currentPhase": "DELIVERY",
+    "flags": {
+      "discovery_completed": true,
+      "specification_completed": true,
+      "backlog_seeded": true
+    }
+  },
+  "features": [],
+  "conventions": {
+    "enforce": [
+      "features/* no debe importar directamente a otros features, solo via shared/",
+      "core/ no debe depender de frameworks externos",
+      "todo @contract debe tener @in y @out definidos"
+    ]
+  }
+}
